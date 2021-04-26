@@ -1,0 +1,21 @@
+{
+  "name": "system-essentials",
+  "version": "1.0.0",
+  "description": "AssemblyScript system essentials API",
+  "main": "index.js",
+  "repository": "https://github.com/JairusSW/system-essentials",
+  "author": "JairusSW <jairus.v.tanaka@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "assemblyscript": "^0.18.27"
+  },
+  "scripts": {
+    "asbuild:untouched": "asc assembly/system.ts --target debug --exportRuntime",
+    "asbuild:optimized": "asc assembly/system.ts --target release --exportRuntime",
+    "asbuild": "yarn asbuild:untouched && yarn asbuild:optimized",
+    "test": "node tests"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.18.27"
+  }
+}
